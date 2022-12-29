@@ -142,11 +142,6 @@ class BurpExtender(IBurpExtender, ITab):
         callbacks.registerScannerCheck(self.scannerCheck)
         print "SSL Scanner check registered"
 
-        projectConfig = json.loads(self._callbacks.saveConfigAsJson())
-        scanAccuracy = projectConfig['scanner']['active_scanning_optimization']['scan_accuracy']
-        scanSpeed = projectConfig['scanner']['active_scanning_optimization']['scan_speed']
-
-        print(scanAccuracy, scanSpeed)
 
         self.scannedHost = []
 
